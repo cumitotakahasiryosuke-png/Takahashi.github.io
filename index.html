@@ -1,174 +1,176 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>公式LINE 友だち追加ページ</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      background: #f5f7fb;
-      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
-      color: #222;
-    }
-    .wrap {
-      max-width: 430px;
-      margin: 0 auto;
-      background: #fff;
-      min-height: 100vh;
-      padding: 28px 18px 40px;
-      text-align: center;
-    }
-    .profile {
-      width: 110px;
-      height: 110px;
-      border-radius: 999px;
-      object-fit: cover;
-      border: 4px solid #f1f1f1;
-      margin-top: 8px;
-    }
-    h1 {
-      font-size: 26px;
-      line-height: 1.5;
-      margin: 18px 0 8px;
-    }
-    .lead {
-      font-size: 15px;
-      color: #555;
-      line-height: 1.8;
-      margin: 0 0 24px;
-    }
-    .line-btn {
-      display: inline-block;
-      background: #06c755;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 700;
-      padding: 14px 26px;
-      border-radius: 999px;
-      font-size: 16px;
-      margin-bottom: 24px;
-    }
-    .card {
-      background: #fafafa;
-      border: 1px solid #ececec;
-      border-radius: 18px;
-      padding: 20px 16px;
-      margin-top: 18px;
-    }
-    .card h2 {
-      font-size: 22px;
-      margin: 0 0 8px;
-    }
-    .card p {
-      font-size: 14px;
-      color: #666;
-      line-height: 1.8;
-      margin: 0 0 12px;
-    }
-    .line-id {
-      font-size: 24px;
-      font-weight: 800;
-      margin: 10px 0 14px;
-      color: #111;
-      word-break: break-all;
-    }
-    .sub-btn {
-      display: inline-block;
-      background: #111;
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 18px;
-      border-radius: 999px;
-      font-size: 14px;
-      border: none;
-      cursor: pointer;
-    }
-    .qr {
-      width: 220px;
-      max-width: 100%;
-      border-radius: 12px;
-      background: #fff;
-      margin: 10px 0 12px;
-    }
-    .steps {
-      text-align: left;
-      font-size: 14px;
-      color: #444;
-      line-height: 1.9;
-      margin-top: 14px;
-    }
-    .footer {
-      margin-top: 26px;
-      font-size: 14px;
-      color: #666;
-      line-height: 1.8;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LINE友だち追加</title>
+
+<style>
+
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif;
+background:#f4f6fb;
+}
+
+.container{
+max-width:420px;
+margin:auto;
+background:white;
+min-height:100vh;
+padding:30px 20px;
+text-align:center;
+}
+
+.profile{
+width:110px;
+height:110px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #eee;
+}
+
+h1{
+font-size:26px;
+margin-top:18px;
+margin-bottom:10px;
+}
+
+.desc{
+color:#555;
+line-height:1.8;
+margin-bottom:25px;
+}
+
+.linebtn{
+display:inline-block;
+background:#06c755;
+color:white;
+text-decoration:none;
+padding:14px 28px;
+border-radius:999px;
+font-weight:bold;
+margin-bottom:25px;
+}
+
+.box{
+background:#fafafa;
+border:1px solid #eee;
+border-radius:18px;
+padding:20px;
+margin-top:18px;
+}
+
+.lineid{
+font-size:24px;
+font-weight:bold;
+margin:10px 0;
+}
+
+.btn{
+background:black;
+color:white;
+border:none;
+padding:10px 18px;
+border-radius:999px;
+cursor:pointer;
+}
+
+.qr{
+width:220px;
+margin-top:10px;
+border-radius:12px;
+}
+
+.steps{
+text-align:left;
+font-size:14px;
+margin-top:15px;
+line-height:1.9;
+color:#444;
+}
+
+.footer{
+margin-top:25px;
+color:#666;
+font-size:14px;
+}
+
+</style>
+
 </head>
+
 <body>
-  <div class="wrap">
-    <img src="profile.jpg" alt="プロフィール画像" class="profile">
 
-    <h1>物販ONE講師の高橋です！</h1>
-    <p class="lead">
-      追加ありがとうございます！<br>
-      ご相談やお問い合わせはLINEからお気軽にご連絡ください。
-    </p>
+<div class="container">
 
-    <a class="line-btn" href="https://lin.ee/cAO1NZa" target="_blank" rel="noopener noreferrer">
-      LINEを友だち追加する
-    </a>
+<img src="profile.jpg" class="profile">
 
-    <div class="card">
-      <h2>または</h2>
-      <h2>LINE IDで追加</h2>
-      <p>LINEアプリの検索からも追加できます</p>
+<h1>高橋良介です</h1>
 
-      <div class="line-id" id="lineId">@027tkdqj</div>
+<p class="desc">
+LINE追加ありがとうございます。<br>
+ご相談・お問い合わせはLINEからお気軽にご連絡ください。
+</p>
 
-      <button class="sub-btn" onclick="copyLineId()">LINE IDをコピー</button>
+<a class="linebtn" href="https://lin.ee/cAO1NZa">
+LINEを友だち追加する
+</a>
 
-      <div class="steps">
-        1. LINEアプリを開く<br>
-        2. ホーム右上の「友だち追加」を押す<br>
-        3. 「検索」を押す<br>
-        4. 「@027tkdqj」を入力して追加
-      </div>
-    </div>
+<div class="box">
 
-    <div class="card">
-      <h2>QRコードで追加</h2>
-      <p>直接読み取るか、画像を保存して追加できます</p>
+<h2>または</h2>
+<h2>LINE IDで追加</h2>
 
-      <img src="qr.png" alt="LINE QRコード" class="qr"><br>
+<p>LINEアプリの検索から追加できます</p>
 
-      <a href="qr.png" download class="sub-btn">QRコードを保存する</a>
+<div class="lineid" id="lineid">@027tkdqj</div>
 
-      <div class="steps">
-        1. LINEアプリを開く<br>
-        2. 「友だち追加」→「QRコード」を押す<br>
-        3. このQRコードを読み取る<br>
-        4. 読み取れない場合は画像保存して追加
-      </div>
-    </div>
+<button class="btn" onclick="copyid()">LINE IDをコピー</button>
 
-    <div class="footer">
-      追加後に一言メッセージを送っていただけると、<br>
-      スムーズにご案内できます。
-    </div>
-  </div>
+<div class="steps">
 
-  <script>
-    function copyLineId() {
-      const text = document.getElementById('lineId').innerText;
-      navigator.clipboard.writeText(text)
-        .then(() => alert('LINE IDをコピーしました'))
-        .catch(() => alert('コピーできませんでした'));
-    }
-  </script>
+1. LINEアプリを開く<br>
+2. ホーム右上の「友だち追加」<br>
+3. 「検索」を押す<br>
+4. 「@027tkdqj」を入力
+
+</div>
+
+</div>
+
+<div class="box">
+
+<h2>QRコードで追加</h2>
+
+<p>QRコードからも追加できます</p>
+
+<img src="qr.png" class="qr"><br><br>
+
+<a href="qr.png" download class="btn">QRコードを保存</a>
+
+</div>
+
+<div class="footer">
+
+追加後に一言メッセージを送っていただけると<br>
+スムーズにご案内できます。
+
+</div>
+
+</div>
+
+<script>
+
+function copyid(){
+
+navigator.clipboard.writeText("@027tkdqj")
+
+alert("LINE IDをコピーしました")
+
+}
+
+</script>
+
 </body>
 </html>
