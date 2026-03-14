@@ -1,242 +1,281 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LINE友だち追加</title>
+  <style>
+    *{
+      box-sizing:border-box;
+    }
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    body{
+      margin:0;
+      background:#000;
+      color:#fff;
+      font-family:Arial,"Hiragino Sans","Yu Gothic",sans-serif;
+      text-align:center;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
 
-<title>LINE友だち追加</title>
+    .wrapper{
+      width:100%;
+      max-width:500px;
+      margin:0 auto;
+      padding:42px 20px 64px;
+    }
 
-<style>
+    .profile{
+      width:170px;
+      height:170px;
+      border-radius:50%;
+      object-fit:cover;
+      display:block;
+      margin:0 auto 24px;
+    }
 
-body{
-margin:0;
-background:#000;
-color:#fff;
-font-family:Arial,"Hiragino Sans","Yu Gothic",sans-serif;
-text-align:center;
-}
+    h1{
+      margin:0 0 10px;
+      font-size:36px;
+      font-weight:700;
+      line-height:1.45;
+      letter-spacing:0.02em;
+    }
 
-.wrapper{
-max-width:500px;
-margin:auto;
-padding:40px 20px 60px;
-}
+    .subtitle{
+      margin:0 0 38px;
+      font-size:22px;
+      line-height:1.75;
+      font-weight:400;
+    }
 
-.profile{
-width:170px;
-height:170px;
-border-radius:50%;
-object-fit:cover;
-margin-bottom:25px;
-}
+    .linebtn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:320px;
+      max-width:100%;
+      padding:19px 34px;
+      border-radius:999px;
+      background:#06c755;
+      color:#fff;
+      text-decoration:none;
+      font-size:28px;
+      font-weight:700;
+      line-height:1.2;
+      margin:0 auto 54px;
+      border:none;
+    }
 
-h1{
-font-size:36px;
-margin-bottom:10px;
-font-weight:bold;
-}
+    .section-title{
+      margin:0 0 8px;
+      font-size:36px;
+      line-height:1.45;
+      font-weight:700;
+      letter-spacing:0.02em;
+    }
 
-.subtitle{
-font-size:22px;
-line-height:1.7;
-margin-bottom:40px;
-}
+    .desc{
+      margin:0 0 22px;
+      font-size:24px;
+      line-height:1.8;
+      font-weight:400;
+    }
 
-.linebtn{
-display:inline-block;
-background:#06c755;
-color:white;
-font-size:28px;
-font-weight:bold;
-padding:20px 45px;
-border-radius:999px;
-text-decoration:none;
-margin-bottom:55px;
-}
+    .lineid{
+      margin:0 0 26px;
+      font-size:42px;
+      line-height:1.35;
+      font-weight:700;
+      word-break:break-all;
+    }
 
-.section-title{
-font-size:36px;
-font-weight:bold;
-margin-top:20px;
-}
+    .outline-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:290px;
+      max-width:100%;
+      padding:15px 28px;
+      border-radius:999px;
+      background:#000;
+      color:#fff;
+      border:2px solid #fff;
+      text-decoration:none;
+      font-size:24px;
+      font-weight:700;
+      line-height:1.2;
+      cursor:pointer;
+      margin-bottom:36px;
+    }
 
-.desc{
-font-size:24px;
-margin:10px 0 25px;
-}
+    button.outline-btn{
+      appearance:none;
+      -webkit-appearance:none;
+    }
 
-.lineid{
-font-size:42px;
-font-weight:bold;
-margin-bottom:30px;
-}
+    .steps{
+      margin:0 0 58px;
+      font-size:24px;
+      line-height:2;
+      font-weight:400;
+    }
 
-.copybtn{
-background:black;
-border:2px solid white;
-color:white;
-font-size:24px;
-padding:15px 35px;
-border-radius:999px;
-cursor:pointer;
-margin-bottom:40px;
-}
+    .qr{
+      width:260px;
+      max-width:100%;
+      display:block;
+      margin:24px auto 24px;
+      background:#fff;
+      padding:10px;
+      border-radius:12px;
+    }
 
-.steps{
-font-size:24px;
-line-height:2;
-margin-bottom:60px;
-}
+    .footer{
+      margin-top:44px;
+      font-size:24px;
+      line-height:1.9;
+      font-weight:400;
+    }
 
-.qr{
-width:260px;
-margin:25px auto;
-background:white;
-padding:10px;
-border-radius:12px;
-}
+    @media (max-width:600px){
+      .wrapper{
+        padding:30px 18px 46px;
+      }
 
-.savebtn{
-background:black;
-border:2px solid white;
-color:white;
-font-size:24px;
-padding:15px 35px;
-border-radius:999px;
-text-decoration:none;
-}
+      .profile{
+        width:120px;
+        height:120px;
+        margin-bottom:18px;
+      }
 
-.footer{
-font-size:24px;
-margin-top:50px;
-line-height:1.9;
-}
+      h1{
+        font-size:24px;
+        margin-bottom:8px;
+      }
 
-@media (max-width:600px){
+      .subtitle{
+        font-size:17px;
+        margin-bottom:28px;
+      }
 
-.profile{
-width:120px;
-height:120px;
-}
+      .linebtn{
+        min-width:0;
+        width:100%;
+        font-size:20px;
+        padding:15px 20px;
+        margin-bottom:40px;
+      }
 
-h1{
-font-size:24px;
-}
+      .section-title{
+        font-size:24px;
+      }
 
-.section-title{
-font-size:24px;
-}
+      .desc{
+        font-size:17px;
+        margin-bottom:16px;
+      }
 
-.subtitle,.desc,.steps,.footer{
-font-size:17px;
-}
+      .lineid{
+        font-size:30px;
+        margin-bottom:20px;
+      }
 
-.linebtn{
-font-size:20px;
-padding:15px 30px;
-}
+      .outline-btn{
+        min-width:0;
+        width:100%;
+        font-size:17px;
+        padding:12px 18px;
+        margin-bottom:26px;
+      }
 
-.lineid{
-font-size:30px;
-}
+      .steps{
+        font-size:17px;
+        line-height:1.9;
+        margin-bottom:42px;
+      }
 
-.copybtn,.savebtn{
-font-size:17px;
-padding:12px 25px;
-}
+      .qr{
+        width:210px;
+        margin:20px auto 20px;
+      }
 
-.qr{
-width:210px;
-}
-
-}
-
-</style>
-
+      .footer{
+        font-size:17px;
+        margin-top:28px;
+        line-height:1.85;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="wrapper">
 
-<div class="wrapper">
+    <img src="images/profile.jpg" alt="プロフィール画像" class="profile" />
 
-<img src="images/profile.jpg" class="profile">
+    <h1>高橋良介です！</h1>
 
-<h1>高橋良介です！</h1>
+    <p class="subtitle">
+      皆さんとお話しするのを楽しみにしています
+    </p>
 
-<p class="subtitle">
-皆さんとお話しするのを楽しみにしています
-</p>
+    <a href="https://lin.ee/cAO1NZa" class="linebtn" target="_blank" rel="noopener noreferrer">
+      友だち追加する
+    </a>
 
-<a href="https://lin.ee/cAO1NZa" class="linebtn">
-友だち追加する
-</a>
+    <div class="section-title">または</div>
+    <div class="section-title">LINE IDで追加</div>
 
-<div class="section-title">または</div>
-<div class="section-title">LINE IDで追加</div>
+    <p class="desc">
+      LINEアプリの検索からも追加できます
+    </p>
 
-<p class="desc">
-LINEアプリの検索からも追加できます
-</p>
+    <div class="lineid" id="lineid">@027tkdqj</div>
 
-<div class="lineid" id="lineid">@027tkdqj</div>
+    <button class="outline-btn" onclick="copyid()">LINE IDをコピー</button>
 
-<button class="copybtn" onclick="copyid()">
-LINE IDをコピー
-</button>
+    <div class="steps">
+      1. LINEアプリを開く<br>
+      2. ホーム右上の「友だち追加」を押す<br>
+      3. 「検索」を押す<br>
+      4. 「@027tkdqj」を入力して追加する
+    </div>
 
-<div class="steps">
+    <div class="section-title">QRコードで追加</div>
 
-1. LINEアプリを開く<br>
-2. ホーム右上の「友だち追加」を押す<br>
-3. 「検索」を押す<br>
-4. 「@027tkdqj」を入力して追加する
+    <p class="desc">
+      直接読み取るか、保存して追加できます
+    </p>
 
-</div>
+    <img src="images/qr.png" alt="LINE QRコード" class="qr" />
 
-<div class="section-title">QRコードで追加</div>
+    <a href="images/qr.png" download class="outline-btn">QRコードを保存する</a>
 
-<p class="desc">
-直接読み取るか、保存して追加できます
-</p>
+    <div class="steps">
+      1. LINEアプリを開く<br>
+      2. 「友だち追加」→「QRコード」を押す<br>
+      3. このQRコードを読み取る<br>
+      4. 読み取れない場合は保存画像から追加する
+    </div>
 
-<img src="images/qr.png" class="qr">
+    <div class="footer">
+      追加後にひとこと送っていただけると<br>
+      スムーズにご案内できます。
+    </div>
 
-<br>
+  </div>
 
-<a href="images/qr.png" download class="savebtn">
-QRコードを保存する
-</a>
-
-<div class="steps">
-
-1. LINEアプリを開く<br>
-2. 「友だち追加」→「QRコード」を押す<br>
-3. このQRコードを読み取る<br>
-4. 読み取れない場合は保存画像から追加する
-
-</div>
-
-<div class="footer">
-
-追加後にひとこと送っていただけると<br>
-スムーズにご案内できます。
-
-</div>
-
-</div>
-
-<script>
-
-function copyid(){
-
-navigator.clipboard.writeText("@027tkdqj")
-
-alert("LINE IDをコピーしました")
-
-}
-
-</script>
-
+  <script>
+    function copyid() {
+      navigator.clipboard.writeText("@027tkdqj")
+        .then(function () {
+          alert("LINE IDをコピーしました");
+        })
+        .catch(function () {
+          alert("コピーできませんでした");
+        });
+    }
+  </script>
 </body>
 </html>
